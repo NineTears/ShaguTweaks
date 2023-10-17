@@ -1,11 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "WorldMap Coordinates",
-  description = "Adds coordinates to the bottom of the World Map.",
+  title = "世界地图坐标",
+  description = "[worldmap-coordinates]\n将坐标添加到世界地图的底部。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "World & MiniMap",
-  enabled = nil,
+  category = "世界地图&小地图",
+  enabled = true,
 })
 
 module.enable = function(self)

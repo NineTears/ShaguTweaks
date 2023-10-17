@@ -10,10 +10,10 @@ if not TargetHPText or not TargetHPPercText then return end
 
 -- This table holds the meta-data of the module:
 local module = ShaguTweaks:register({
-  title = "Turtle WoW Compatibility",
-  description = "Adds compatibility to Turtle WoW's custom changes",
+  title = "兼容乌龟服",
+  description = "[turtle-wow]\n增加了兼容乌龟服的设置",
   expansions = { ["vanilla"] = true, ["tbc"] = false },
-  category = "General",
+  category = "-通用-",
   enabled = true,
 })
 

@@ -3,10 +3,11 @@ local UnitCastingInfo = ShaguTweaks.UnitCastingInfo
 local UnitChannelInfo = ShaguTweaks.UnitChannelInfo
 
 local module = ShaguTweaks:register({
-  title = "Nameplate Castbar",
-  description = "Adds a castbar to the nameplate based on combat log estimations.",
+  title = "姓名版施法条",
+  description = "[nameplate-castbar]\n根据战斗日志估算，在姓名版添加施法条。",
   expansions = { ["vanilla"] = true, ["tbc"] = false },
-  enabled = nil,
+  category = "单位框架",
+  enabled = true,
 })
 
 module.enable = function(self)

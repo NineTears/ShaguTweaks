@@ -1,9 +1,9 @@
 local module = ShaguTweaks:register({
-  title = "Reduced Actionbar Size",
-  description = "Reduces the actionbar size by removing several items such as the bag panel and microbar",
+  title = "精简暴雪动作条",
+  description = "[reduced-actionbar]\n精简暴雪风格动作条，移除底部默认工具栏（如包裹栏和系统栏）和重排居中堆叠系统动作条、经验条和声望条。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  categpry = nil,
-  enabled = nil,
+  category = "界面UI",
+  enabled = true,
 })
 
 module.enable = function(self)

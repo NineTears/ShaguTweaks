@@ -8,10 +8,10 @@ local rgbhex = ShaguTweaks.rgbhex
 local strsplit = ShaguTweaks.strsplit
 
 local module = ShaguTweaks:register({
-  title = "Chat Hyperlinks",
-  description = "Copy website URLs from the chat, transforms CLINKs into real items and handles quest and player links.",
+  title = "聊天超链接",
+  description = "[chat-links]\n从聊天中复制网站URL，将链接转换为真实地址，并处理任务链接。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Social & Chat",
+  category = "社交&聊天",
   enabled = true,
 })
 

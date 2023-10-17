@@ -25,10 +25,10 @@ local CLASS_ICON_TCOORDS = {
 }
 
 local module = ShaguTweaks:register({
-  title = "Unit Frame Class Portraits",
-  description = "Replace unitframe portraits with class icons.",
+  title = "职业图标头像",
+  description = "[unitframes-classportrait]\n用职业图标替换框体头像。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Unit Frames",
+  category = "单位框架",
   enabled = nil,
 })
 

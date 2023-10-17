@@ -1,9 +1,10 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Hide Gryphons",
-  description = "Hides the gryphons left and right of the action bar.",
+  title = "隐藏鹰头狮",
+  description = "[hide-gryphons]\n隐藏系统底部左右两侧的鹰头狮。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
+  category = "界面UI",
   enabled = nil,
 })
 

@@ -1,8 +1,8 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Auto Dismount",
-  description = "Automatically dismounts whenever a spell is casted.",
+  title = "自动下马",
+  description = "[auto-dismount]\n提示“你正在骑乘状态”时，自动取消坐骑",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   enabled = nil,
 })

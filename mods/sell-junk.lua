@@ -1,10 +1,10 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Sell Junk",
-  description = "Adds a “Sell Junk” button to every merchant window, that sells all grey items.",
+  title = "出售垃圾",
+  description = "[sell-junk]\n在每个商家窗口添加一个“出售垃圾”按钮，出售所有灰色物品。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Tooltip & Items",
+  category = "提示&物品",
   enabled = true,
 })
 

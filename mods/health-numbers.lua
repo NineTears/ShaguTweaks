@@ -4,10 +4,10 @@ local GetColorGradient = ShaguTweaks.GetColorGradient
 local vanilla = ShaguTweaks.GetExpansion() == "vanilla" or nil
 
 local module = ShaguTweaks:register({
-  title = "Real Health Numbers",
-  description = "Estimates health numbers, and shows numbers on player, pet and target unit frames.",
+  title = "状态条数值",
+  description = "[health-numbers]\n估计实际生命值显示在玩家、宠物和目标的生命条，显示魔法值/能量值/怒气值。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Unit Frames",
+  category = "单位框架",
   enabled = true,
 })
 

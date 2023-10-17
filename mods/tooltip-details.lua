@@ -4,11 +4,11 @@ local rgbhex = ShaguTweaks.rgbhex
 local Abbreviate = ShaguTweaks.Abbreviate
 
 local module = ShaguTweaks:register({
-  title = "Tooltip Details",
-  description = "Display health, class color, guild name, guild rank and current target on unit tooltips.",
+  title = "提示框信息",
+  description = "[tooltip-details]\n在提示框上显示生命值、职业颜色(为了兼容Ztip不显示公会和目标信息)。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Tooltip & Items",
-  enabled = nil,
+  category = "提示&物品",
+  enabled = true,
 })
 
 local backdrop = {
@@ -75,31 +75,37 @@ local function UpdateTooltip()
       local color = UnitReactionColor[reaction]
       GameTooltipStatusBar:SetStatusBarColor_orig(color.r, color.g, color.b)
     end
+    --兼容Ztip，取消显示PVP名称
     if pvptitle ~= name then
       GameTooltip:AppendText(" |cff666666["..pvptitle.."]|r")
     end
+    --
   end
 
+  --兼容Ztip，取消显示公会名称和等级
   if guild then
     local rank, lead = "", ""
     if rankstr then rank = " |cffaaaaaa(" .. rankstr .. ")"  end
     if rankid and rankid == 0 then lead = "|cffffcc00*|r" end
     GameTooltip:AddLine("<" .. guild .. ">" .. lead .. rank, 0.3, 1, 0.5)
   end
+  --
 
+  --兼容Ztip，取消显示目标名称和颜色
   if target then
     if UnitIsPlayer(unit .. "target") and targetClass then
       local color = RAID_CLASS_COLORS[targetClass]
-      GameTooltip:AddLine(target, color.r, color.g, color.b)
+      GameTooltip:AddLine("|cffffcc00目标 [ |r".. target .. "|cffffcc00 ]|r", color.r, color.g, color.b)
     elseif targetReaction then
       local color = UnitReactionColor[targetReaction]
       if color then
-        GameTooltip:AddLine(target, color.r, color.g, color.b)
+        GameTooltip:AddLine("|cffffcc00目标 [ |r".. target .. "|cffffcc00 ]|r", color.r, color.g, color.b)
       else
-        GameTooltip:AddLine(target, .5, .5, .5)
+        GameTooltip:AddLine("|cffffcc00目标 [ |r".. target .. "|cffffcc00 ]|r", .5, .5, .5)
       end
     end
   end
+  --
 
   GameTooltip:Show()
 end
@@ -141,24 +147,26 @@ module.enable = function(self)
     this.level = UnitLevel("mouseover")
   end)
 
-  -- update texts
-  statusbar:SetScript("OnUpdate", function()
-    local hp = GameTooltipStatusBar:GetValue()
-    local _, hpmax = GameTooltipStatusBar:GetMinMaxValues()
-    local rhp, rhpmax, estimated
+-- update texts
+statusbar:SetScript("OnUpdate", function()
+ local hp = GameTooltipStatusBar:GetValue()
+ local _, hpmax = GameTooltipStatusBar:GetMinMaxValues()
+ local rhp, rhpmax, estimated
 
-    if hpmax > 100 or (round(hpmax/100*hp) ~= hp) then
-      rhp, rhpmax = hp, hpmax
-    else
-      rhp, rhpmax, estimated = ShaguTweaks.libhealth:GetUnitHealthByName(this.name, this.level, tonumber(hp), tonumber(hpmax))
-    end
+ if hpmax > 100 or (round(hpmax/100*hp) ~= hp) then
+   rhp, rhpmax = hp, hpmax
+ else
+   rhp, rhpmax, estimated = ShaguTweaks.libhealth:GetUnitHealthByName(this.name, this.level, tonumber(hp), tonumber(hpmax))
+ end
 
-    if ( estimated or hpmax > 100 or round(hpmax/100*hp) ~= hp ) then
-      GameTooltipStatusBar.backdrop.health:SetText(string.format("%s / %s", Abbreviate(rhp, true), Abbreviate(rhpmax, true)))
-    elseif hpmax > 0 then
-      GameTooltipStatusBar.backdrop.health:SetText(string.format("%s%%", ceil(hp/hpmax*100)))
-    else
-      GameTooltipStatusBar.backdrop.health:SetText("")
-    end
-  end)
+ if ( estimated or hpmax > 100 or round(hpmax/100*hp) ~= hp ) then
+   GameTooltipStatusBar.backdrop.health:SetText(string.format("%.0f / %.0f", rhp, rhpmax))
+ elseif hpmax > 0 and rhp > 10000 then
+   GameTooltipStatusBar.backdrop.health:SetText(string.format("%.2f / %.2f", rhp/10000, rhpmax/10000))
+ elseif hpmax > 0 then
+   GameTooltipStatusBar.backdrop.health:SetText(string.format("%s%%", ceil(hp/hpmax*100)))
+ else
+   GameTooltipStatusBar.backdrop.health:SetText("")
+ end
+end)
 end

@@ -10,11 +10,11 @@ local strsplit = ShaguTweaks.strsplit
 local friendinfo = gsub(gsub(FRIENDS_LEVEL_TEMPLATE,"%%s","%%s %%s"),"%%d","%%s")
 
 local module = ShaguTweaks:register({
-  title = "Social Colors",
-  description = "Show class colors in Who, Guild, Friends and Chat.",
+  title = "姓名职业着色",
+  description = "[social-colors]\n在查找列表、公会列表、好友列表和聊天框中显示职业颜色",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Social & Chat",
-  enabled = nil,
+  category = "社交&聊天",
+  enabled = true,
 })
 
 module.enable = function(self)

@@ -1,11 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Debuff Timer",
-  description = "Show debuff durations on the target unit frame.",
+  title = "目标Debuff计时",
+  description = "[target-debufftimer]\n在目标单位框体上显示Debuff持续时间。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "Unit Frames",
-  enabled = true,
+  category = "单位框架",
+  enabled = nil,
 })
 
 local libdebuff = ShaguTweaks.libdebuff

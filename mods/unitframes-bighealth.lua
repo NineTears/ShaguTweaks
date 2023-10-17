@@ -1,10 +1,10 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Unit Frame Big Health",
-  description = "Increases the healthbar of the player and target unitframe.",
+  title = "宽血条风格",
+  description = "[unitframes-bighealth]\n加宽玩家和目标单位框的生命值栏。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Unit Frames",
+  category = "单位框架",
   enabled = nil,
 })
 

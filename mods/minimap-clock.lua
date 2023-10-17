@@ -1,11 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "MiniMap Clock",
-  description = "Adds a small 24h clock to the mini map.",
+  title = "迷你地图时钟",
+  description = "[minimap-clock]\n在迷你地图中添加一个24小时小时钟。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "World & MiniMap",
-  enabled = nil,
+  category = "世界地图&小地图",
+  enabled = true,
 })
 
 MinimapClock = CreateFrame("Frame", "Clock", Minimap)

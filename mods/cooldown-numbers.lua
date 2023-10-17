@@ -5,8 +5,8 @@ local AddBorder = ShaguTweaks.AddBorder
 local TimeConvert = ShaguTweaks.TimeConvert
 
 local module = ShaguTweaks:register({
-  title = "Cooldown Numbers",
-  description = "Display  the remaining duration as text on every cooldown.",
+  title = "技能冷却",
+  description = "[cooldown-numbers]\n在技能冷却时以文本形式显示剩余持续时间。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   enabled = nil,
   color = { r = .3, g = .3, b = .3, a = .9}

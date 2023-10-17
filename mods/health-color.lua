@@ -4,11 +4,11 @@ local GetColorGradient = ShaguTweaks.GetColorGradient
 local vanilla = ShaguTweaks.GetExpansion() == "vanilla" or nil
 
 local module = ShaguTweaks:register({
-  title = "Unit Frame Health Colors",
-  description = "Change health text color based on its value.",
+  title = "低血量血条变色",
+  description = "[health-color]\n当生命值低于20%改变姓名版的颜色。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Unit Frames",
-  enabled = nil,
+  category = "单位框架",
+  enabled = true,
 })
 
 module.enable = function(self)

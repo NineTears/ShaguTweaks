@@ -1,10 +1,10 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "MiniMap Square",
-  description = "Draw the mini map in a squared shape instead of a round one.",
+  title = "方形小地图",
+  description = "[minimap-square]\n把小地图画成方形而不是圆形。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "World & MiniMap",
+  category = "世界地图&小地图",
   enabled = nil,
 })
 

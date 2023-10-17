@@ -1,11 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Unit Frame Class Colors",
-  description = "Adds class colors to the player, target and party unit frames.",
+  title = "头像职业着色",
+  description = "[unitframes-classcolor]\n为玩家、目标和小队头像框体添加职业颜色。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "Unit Frames",
-  enabled = nil,
+  category = "单位框架",
+  enabled = true,
 })
 
 local partycolors = function()

@@ -1,10 +1,10 @@
 local _G = ShaguTweaks.GetGlobalEnv()
 
 local module = ShaguTweaks:register({
-  title = "Equip Compare",
-  description = "Shows currently equipped items on tooltips while the shift key is pressed.",
+  title = "装备对比",
+  description = "[equip-compare]\n在提示框上显示当前装备对比。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "Tooltip & Items",
+  category = "提示&物品",
   enabled = true,
 })
 
@@ -103,11 +103,11 @@ module.enable = function(self)
 
   local function ShowCompare(tooltip)
     -- abort if shift is not pressed
-    if not IsShiftKeyDown() then
-      ShoppingTooltip1:Hide()
-      ShoppingTooltip2:Hide()
-      return
-    end
+    --if not IsShiftKeyDown() then
+      --ShoppingTooltip1:hide()
+      --ShoppingTooltip2:hide()
+      --return
+    --end
 
     for i=1,tooltip:NumLines() do
       local tmpText = _G[tooltip:GetName() .. "TextLeft"..i]

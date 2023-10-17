@@ -4,8 +4,8 @@ local GetExpansion = ShaguTweaks.GetExpansion
 local AddBorder = ShaguTweaks.AddBorder
 
 local module = ShaguTweaks:register({
-  title = "Darkened UI",
-  description = "Turns the entire interface into darker colors.",
+  title = "暗黑风格UI",
+  description = "[dark-ui-elements]\n将整个界面窗口变成暗黑风格。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   enabled = nil,
   color = { r = .3, g = .3, b = .3, a = .9}
