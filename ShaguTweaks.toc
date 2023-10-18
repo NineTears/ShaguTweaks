@@ -36,8 +36,8 @@ mods\custom.lua
 
 # modules
 mods\actionbar-dfgryphons.lua
-mods\mods\actionbar-dfwyverns.lua
-mods\mods\actionbar-gryphons.lua
+mods\actionbar-dfwyverns.lua
+mods\actionbar-gryphons.lua
 mods\actionbar-improved-expbar.lua
 mods\actionbar-quick-actions.lua
 mods\actionbar-range-color.lua
