@@ -13,14 +13,23 @@ module.enable = function(self)
         "battlemaster",
         "taxi",
         "trainer",
-        "vendor"
+        "vendor",
+        "banker",
     }
 
     local phrases = {
+        -- Bank
+        "I would like to check my deposit box",
+        
+        -- Vanilla
         "Teleport me to the Molten Core",
+
         -- Turtle WoW
+        -- Alliance
         "Please open a portal to Alah'Thalas",
-        "Please open a portal to Stormwind"
+        "Please open a portal to Stormwind",
+        -- Horde        
+        "Open a portal to Amani'Alor",
     }
 
     function actions:Gossip()        

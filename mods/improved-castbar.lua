@@ -12,7 +12,7 @@ module.enable = function(self)
     local UnitCastingInfo = ShaguTweaks.UnitCastingInfo
     local UnitChannelInfo = ShaguTweaks.UnitChannelInfo
 
-    local castbar = CreateFrame("FRAME", nil, CastingBarFrame)
+    local castbar = CreateFrame("FRAME", "STImprovedCastbar", CastingBarFrame)
     castbar:Hide()
 
     castbar.texture = CreateFrame("Frame", nil, castbar)

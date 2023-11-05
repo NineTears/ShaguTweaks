@@ -82,6 +82,7 @@ mods\unitframes-classcolor.lua
 mods\unitframes-classportrait.lua
 mods\unitframes-combat-indicator.lua
 mods\unitframes-energy-tick.lua
+mods\unitframes-target-buffs.lua
 mods\vendor-values.lua
 mods\worldmap-coordinates.lua
 mods\worldmap-reveal.lua
