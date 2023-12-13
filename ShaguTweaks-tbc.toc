@@ -86,4 +86,3 @@ mods\unitframes-target-buffs.lua
 mods\vendor-values.lua
 mods\worldmap-coordinates.lua
 mods\worldmap-reveal.lua
-mods\worldmap-window.lua
