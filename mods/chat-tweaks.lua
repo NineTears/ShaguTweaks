@@ -2,7 +2,7 @@ local _G = ShaguTweaks.GetGlobalEnv()
 local scrollspeed = 1
 
 local module = ShaguTweaks:register({
-  title = "聊天增强",
+  title = "聊天调整",
   description = "[chat-tweaks]\n允许使用鼠标滚轮滚动，启用粘性聊天频道，以及方向键直接编辑输入栏。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   category = "社交&聊天",
