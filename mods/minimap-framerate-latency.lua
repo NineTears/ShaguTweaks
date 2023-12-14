@@ -1,14 +1,16 @@
 local tarFPS = 60 -- target FPS (default 60)
 
 local module = ShaguTweaks:register({
-  title = "小地图帧率和延迟",
-  description = "[minimap-framerate-latency]\n在小地图增加一个小的帧率和延迟显示。",
+  title = "小地图帧数和延迟",
+  description = "[minimap-framerate-latency]\n在小地图添加帧数和延迟显示。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   category = "世界地图&小地图",
   enabled = nil,
 })
 
 module.enable = function(self)
+    local start = 0
+
     local function round(input, places)
         if not places then places = 0 end
         if type(input) == "number" and type(places) == "number" then
@@ -108,22 +110,26 @@ module.enable = function(self)
     MinimapFPS.text:SetAllPoints(MinimapFPS)
     MinimapFPS.text:SetFontObject(GameFontWhite)
     MinimapFPS:SetScript("OnUpdate", function()
-        if ( this.tick or 1) > GetTime() then return else this.tick = GetTime() + 1 end
-            local FPS = floor(GetFramerate())
-            currFPS = FPS
+        if (this.tick or 1) > GetTime() then return else this.tick = GetTime() + 1 end
+        if this.tick < start then return end
+        if not lowFPS then lowFPS = floor(GetFramerate()) end
+        if not highFPS then highFPS = floor(GetFramerate()) end
+        
+        local FPS = floor(GetFramerate())
+        currFPS = FPS
 
-            local _, _, _, FPShex = GetColorGradient(FPS/tarFPS)
-            FPS = FPShex .. FPS .. "|r"
-            this.text:SetText(FPS.."")
+        local _, _, _, FPShex = GetColorGradient(FPS/tarFPS)
+        FPS = FPShex .. FPS .. "|r"
+        this.text:SetText(FPS.."")
 
-            -- check for high / low FPS
-            if (highFPS < currFPS) then
-                highFPS = currFPS
-            end
+        -- check for high / low FPS
+        if (highFPS < currFPS) then
+            highFPS = currFPS
+        end
 
-            if ((lowFPS > currFPS) and (currFPS > 0)) then
-                lowFPS = currFPS
-            end
+        if ((lowFPS > currFPS) and (currFPS > 0)) then
+            lowFPS = currFPS
+        end
     end)
 
     MinimapFPS:SetScript("OnEnter", function()
@@ -168,28 +174,32 @@ module.enable = function(self)
     MinimapMS.text:SetFontObject(GameFontWhite)
     MinimapMS:SetScript("OnUpdate", function()
         if (this.tick or 1) > GetTime() then return else this.tick = GetTime() + 1 end
-            local _, _, MS = GetNetStats()
-            currMS = MS
-            
-            -- color
-            local color = "|cff00ff00"
-            if (currMS > PERFORMANCEBAR_MEDIUM_LATENCY) then
-                color = "|cffff0000"
-            elseif (currMS > PERFORMANCEBAR_LOW_LATENCY) then
-                color = "|cffffff00"
-            end
-            
-            MS = color .. MS .. "|r"
-            this.text:SetText(MS.."")
+        if this.tick < 1 then return end
+        if not lowMS then _, _, lowMS = GetNetStats() end
+        if not highMS then  _, _, highMS = GetNetStats() end
 
-            -- check for high / low fps
-            if (highMS < currMS) then
-                highMS = currMS
-            end
+        local _, _, MS = GetNetStats()
+        currMS = MS
+        
+        -- color
+        local color = "|cff00ff00"
+        if (currMS > PERFORMANCEBAR_MEDIUM_LATENCY) then
+            color = "|cffff0000"
+        elseif (currMS > PERFORMANCEBAR_LOW_LATENCY) then
+            color = "|cffffff00"
+        end
+        
+        MS = color .. MS .. "|r"
+        this.text:SetText(MS.."")
 
-            if ((lowMS > 0) and (lowMS > currMS) and (currMS > 0)) then
-                lowMS = currMS
-            end
+        -- check for high / low fps
+        if (highMS < currMS) then
+            highMS = currMS
+        end
+
+        if ((lowMS > 0) and (lowMS > currMS) and (currMS > 0)) then
+            lowMS = currMS
+        end
     end)
 
     MinimapMS:SetScript("OnEnter", function()
@@ -220,11 +230,8 @@ module.enable = function(self)
     events:SetScript("OnEvent", function()
         if not this.loaded then
             this.loaded = true
-            _, _, lowMS = GetNetStats()
-            _, _, highMS = GetNetStats()
-            MinimapMS:Show()
-            lowFPS = floor(GetFramerate())
-            highFPS = floor(GetFramerate())
+            start = GetTime() + 1         
+            MinimapMS:Show()            
             MinimapFPS:Show()
         end
     end)   
