@@ -6,7 +6,7 @@ local module = ShaguTweaks:register({
   description = "[worldmap-reveal]\n显示世界地图上未探索的区域。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   category = "世界地图&小地图",
-  enabled = true,
+  enabled = nil,
 })
 
 module.enable = function(self)
