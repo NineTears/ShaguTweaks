@@ -1,9 +1,9 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks
-## Author: Shagu
-## Notes: A collection of tweaks and enhancements to the Default UI
-## Title-zhCN:|CFFDD66DD[界面]|RShagu设置
-## Notes-zhCN:|CFFDD66DDShaguPlates|R|NShagu设置（Wind&叶叶菜汉化）
+## Title: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffcccccc[红星3.62]|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffcccccc[红星3.62]|R
+## Notes: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffcccccc[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
+## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffcccccc[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
+## Author: Shagu, NineTears(Wind), 叶叶菜
 ## X-Repple: 界面
 ## Version: GIT
 ## SavedVariablesPerCharacter: ShaguTweaks_config, ShaguTweaks_cache
