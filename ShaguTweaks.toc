@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.62]|R
-## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.62]|R
+## Title: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.63]|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.63]|R
 ## Notes: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Author: Shagu, NineTears(Wind), 叶叶菜
@@ -9,12 +9,7 @@
 ## SavedVariablesPerCharacter: ShaguTweaks_config, ShaguTweaks_cache
 
 # locales
-locales\locales_deDE.lua
 locales\locales_enUS.lua
-locales\locales_esES.lua
-locales\locales_frFR.lua
-locales\locales_koKR.lua
-locales\locales_ruRU.lua
 locales\locales_zhCN.lua
 
 # basic
