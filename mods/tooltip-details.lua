@@ -4,8 +4,8 @@ local rgbhex = ShaguTweaks.rgbhex
 local Abbreviate = ShaguTweaks.Abbreviate
 
 local module = ShaguTweaks:register({
-  title = "提示框信息",
-  description = "[tooltip-details]\n在提示框上显示生命值、职业颜色(为了兼容Ztip不显示公会和目标信息)。",
+  title = "鼠标提示",
+  description = "[tooltip-details]\n在鼠标提示上显示生命值、魔法能量值职业颜色(为了兼容Ztip不显示其他信息)。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   category = "提示&物品",
   enabled = true,
@@ -75,23 +75,23 @@ local function UpdateTooltip()
       local color = UnitReactionColor[reaction]
       GameTooltipStatusBar:SetStatusBarColor_orig(color.r, color.g, color.b)
     end
-    --兼容Ztip，取消显示PVP名称
+  --[[兼容Ztip，取消显示PVP名称
     if pvptitle ~= name then
       GameTooltip:AppendText(" |cff666666["..pvptitle.."]|r")
     end
-    --
+    --]]
   end
 
-  --兼容Ztip，取消显示公会名称和等级
+  --[[兼容Ztip，取消显示公会名称和等级
   if guild then
     local rank, lead = "", ""
     if rankstr then rank = " |cffaaaaaa(" .. rankstr .. ")"  end
     if rankid and rankid == 0 then lead = "|cffffcc00*|r" end
     GameTooltip:AddLine("<" .. guild .. ">" .. lead .. rank, 0.3, 1, 0.5)
   end
-  --
+  --]]
 
-  --兼容Ztip，取消显示目标名称和颜色
+  --[[兼容Ztip，取消显示目标名称和颜色
   if target then
     if UnitIsPlayer(unit .. "target") and targetClass then
       local color = RAID_CLASS_COLORS[targetClass]
@@ -105,7 +105,7 @@ local function UpdateTooltip()
       end
     end
   end
-  --
+  --]]
 
   GameTooltip:Show()
 end
