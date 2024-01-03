@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
   description = "[equip-compare]\n在提示框上显示当前装备对比。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   category = "提示&物品",
-  enabled = true,
+  enabled = nil,
 })
 
 module.enable = function(self)

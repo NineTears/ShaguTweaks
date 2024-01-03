@@ -3,7 +3,7 @@ local module = ShaguTweaks:register({
     description = "[improved-roll-frames]\n显示点击了需求/贪婪/放弃的用户(需要在界面选项中选中“详细的拾取信息”)。",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "界面UI",
-    enabled = true,
+    enabled = nil,
   })
 
 module.enable = function(self)

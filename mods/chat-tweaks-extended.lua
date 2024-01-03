@@ -6,8 +6,8 @@ local rgbhex = ShaguTweaks.rgbhex
 local hooksecurefunc = ShaguTweaks.hooksecurefunc
 
 local module = ShaguTweaks:register({
-    title = "聊天调整扩展版",
-    description = '[chat-tweaks-extended]\n扩展了"聊天调整"功能。缩短频道名称，鼠标悬停时显示物品链接，右键点击添加屏蔽功能，Alt+点击聊天名称进行邀请，Ctrl+点击聊天名称进行目标选择。',
+    title = "聊天调整增强",
+    description = '[chat-tweaks-extended]\n增强了"聊天调整"功能。缩短频道名称，鼠标悬停时显示物品链接，右键点击添加屏蔽功能，Alt+点击聊天名称进行邀请，Ctrl+点击聊天名称进行目标选择。',
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "社交&聊天",
     enabled = nil,

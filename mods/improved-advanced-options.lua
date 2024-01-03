@@ -12,7 +12,7 @@ module.enable = function(self)
   local function position()
     AdvancedSettingsGUI:SetScale(1)
     AdvancedSettingsGUI:ClearAllPoints()
-    AdvancedSettingsGUI:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+    AdvancedSettingsGUI:SetPoint("CENTER", UIParent, "CENTER", 0, 48)
   end
 
   if not this.hooked then

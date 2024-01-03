@@ -2,8 +2,8 @@ local _G = ShaguTweaks.GetGlobalEnv()
 local hooksecurefunc = ShaguTweaks.hooksecurefunc
 
 local module = ShaguTweaks:register({
-    title = "超出范围颜色",
-    description = "[actionbar-range-color]\n超出范围时，动作条按钮将显示为红色。",
+    title = "超出范围变色",
+    description = "[actionbar-range-color]\n当超出技能范围时，动作条按钮将显示为红色。",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = "界面UI",
     enabled = true,

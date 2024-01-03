@@ -4,7 +4,7 @@ local mod = math.mod or mod
 
 local current_config = {}
 local max_width = 500
-local max_height = 650
+local max_height = 620
 
 local settings = CreateFrame("Frame", "AdvancedSettingsGUI", UIParent)
 settings:Hide()
@@ -136,7 +136,7 @@ settings.load = function(self)
     -- add category title
     settings.category[category].text = settings.category[category].text or settings.category[category]:CreateFontString(nil, "HIGH", "GameFontHighlightSmall")
     settings.category[category].text:SetText(category)
-    settings.category[category].text:SetPoint("TOPLEFT", 5, 10)
+    settings.category[category].text:SetPoint("TOPLEFT", 5, 12)
     yoff = yoff + spacing/2
 
     for title, module in ShaguTweaks.spairs(entries) do

@@ -3,7 +3,7 @@ local module = ShaguTweaks:register({
     description = "[max-smoothness]\n优化游戏引擎，让游戏更流畅。请注意，这将永久地将设置添加到Config.wtf文件。",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
     category = nil,
-    enabled = true,
+    enabled = nil,
 })
   
 module.enable = function(self)
