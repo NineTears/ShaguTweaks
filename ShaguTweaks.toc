@@ -1,8 +1,8 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.63]|R
-## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星3.63]|R
-## Notes: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
-## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
+## Title: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]3.63|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]3.63|R
+## Notes: |cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]3.63|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
+## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|RzhCN |cffff1450[红星]3.63|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Author: Shagu, NineTears(Wind), 叶叶菜
 ## X-Repple: 界面
 ## Version: GIT
