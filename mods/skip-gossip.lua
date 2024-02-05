@@ -15,7 +15,7 @@ module.enable = function(self)
         "trainer",
         "vendor",
         "banker",
-    }
+    }    
 
     local phrases = {
         -- Bank
@@ -32,11 +32,25 @@ module.enable = function(self)
         "Open a portal to Amani'Alor",
     }
 
+    local ignore = {
+        -- npcs named here will be ignored
+        "Goblin Brainwashing Device",
+    }
+
     function actions:Gossip()        
         if actions.gossip then
+            local name = GossipFrameNpcNameText:GetText()
             local GossipOptions = {}
             local title
-            title,GossipOptions[1],_,GossipOptions[2],_,GossipOptions[3],_,GossipOptions[4],_,GossipOptions[5] = GetGossipOptions()            
+            title,GossipOptions[1],_,GossipOptions[2],_,GossipOptions[3],_,GossipOptions[4],_,GossipOptions[5] = GetGossipOptions()
+
+            if name then
+                for _, npc in pairs(ignore) do
+                    if name == npc then
+                        return true 
+                    end
+                end               
+            end
 
             for i = 1, 5 do
                 if not GossipOptions[i] then break end              
@@ -58,6 +72,7 @@ module.enable = function(self)
                     end
                 end
             end
+
         end
     end
 
