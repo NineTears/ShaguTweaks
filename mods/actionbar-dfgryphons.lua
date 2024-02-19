@@ -11,6 +11,6 @@ local module = ShaguTweaks:register({
 module.enable = function(self)
     ShaguTweaks.dfgryphons = true
     for _, g in pairs({MainMenuBarLeftEndCap, MainMenuBarRightEndCap}) do
-        g:SetTexture[[Interface\AddOns\ShaguTweaks-mods\img\df\gryphon]]
+        g:SetTexture[[Interface\AddOns\ShaguTweaks\img\df\gryphon]]
     end    
 end

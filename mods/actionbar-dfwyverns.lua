@@ -11,6 +11,6 @@ local module = ShaguTweaks:register({
 module.enable = function(self)
     ShaguTweaks.dfwyverns = true
     for _, g in pairs({MainMenuBarLeftEndCap, MainMenuBarRightEndCap}) do
-        g:SetTexture[[Interface\AddOns\ShaguTweaks-mods\img\df\wyvern]]  
+        g:SetTexture[[Interface\AddOns\ShaguTweaks\img\df\wyvern]]  
     end
 end

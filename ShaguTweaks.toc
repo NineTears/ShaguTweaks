@@ -32,6 +32,7 @@ mods\custom.lua
 # modules
 mods\actionbar-dfgryphons.lua
 mods\actionbar-dfwyverns.lua
+mods\actionbar-ecwyvern.lua
 mods\actionbar-gryphons.lua
 mods\actionbar-improved-expbar.lua
 mods\actionbar-macro-icons.lua
