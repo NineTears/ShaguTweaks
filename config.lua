@@ -236,3 +236,6 @@ end)
 
 GameMenuButtonKeybindings:ClearAllPoints()
 GameMenuButtonKeybindings:SetPoint("TOP", advanced, "BOTTOM", 0, -1)
+
+
+AdvancedSettingsGUI:SetFrameStrata("HIGH")
