@@ -140,10 +140,11 @@ module.enable = function(self)
     MainMenuBarArtFrame:SetFrameStrata("LOW")
     CastingBarFrame:SetFrameStrata("LOW") 
     MainMenuExpBar:SetFrameStrata("LOW") 
+    MainMenuBar:SetFrameStrata("LOW") 
 
     for i = 1, NUM_ACTIONBAR_BUTTONS do
       local button = getglobal("ActionButton" .. i)
-        button:SetFrameStrata("MEDIUM")
+        button:SetFrameStrata("LOW")
         button = getglobal("MultiBarBottomRightButton" .. i)
         button:SetFrameStrata("LOW")
         button = getglobal("MultiBarBottomLeftButton" .. i)
