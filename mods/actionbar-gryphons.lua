@@ -12,4 +12,8 @@ module.enable = function(self)
     for _, g in pairs({MainMenuBarLeftEndCap, MainMenuBarRightEndCap}) do
         g:SetTexture[[Interface\MainMenuBar\UI-MainMenuBar-EndCap-Human]]  
     end
+    MainMenuBarLeftEndCap:ClearAllPoints()
+    MainMenuBarLeftEndCap:SetPoint("BOTTOMRIGHT", MainMenuBar, "BOTTOMLEFT", 30, 0)
+    MainMenuBarRightEndCap:ClearAllPoints()
+    MainMenuBarRightEndCap:SetPoint("BOTTOMLEFT", MainMenuBar, "BOTTOMRIGHT", -30, 0)
 end

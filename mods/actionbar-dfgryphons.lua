@@ -13,4 +13,8 @@ module.enable = function(self)
     for _, g in pairs({MainMenuBarLeftEndCap, MainMenuBarRightEndCap}) do
         g:SetTexture[[Interface\AddOns\ShaguTweaks\img\df\gryphon]]
     end    
+    MainMenuBarLeftEndCap:ClearAllPoints()
+    MainMenuBarLeftEndCap:SetPoint("BOTTOMRIGHT", MainMenuBar, "BOTTOMLEFT", 26, -4)
+    MainMenuBarRightEndCap:ClearAllPoints()
+    MainMenuBarRightEndCap:SetPoint("BOTTOMLEFT", MainMenuBar, "BOTTOMRIGHT", -26, -4)
 end

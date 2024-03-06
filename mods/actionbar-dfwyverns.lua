@@ -13,4 +13,8 @@ module.enable = function(self)
     for _, g in pairs({MainMenuBarLeftEndCap, MainMenuBarRightEndCap}) do
         g:SetTexture[[Interface\AddOns\ShaguTweaks\img\df\wyvern]]  
     end
+    MainMenuBarLeftEndCap:ClearAllPoints()
+    MainMenuBarLeftEndCap:SetPoint("BOTTOMRIGHT", MainMenuBar, "BOTTOMLEFT", 27, -2)
+    MainMenuBarRightEndCap:ClearAllPoints()
+    MainMenuBarRightEndCap:SetPoint("BOTTOMLEFT", MainMenuBar, "BOTTOMRIGHT", -27, -2)
 end

@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.64]|R
-## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.64]|R
+## Title: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.65]|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.65]|R
 ## Notes: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Author: Shagu, NineTears(Wind), 叶叶菜

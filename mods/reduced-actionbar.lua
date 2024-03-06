@@ -88,8 +88,8 @@ module.enable = function(self)
   MainMenuBarTexture1:SetPoint("RIGHT", MainMenuBarArtFrame, "RIGHT")
 
   -- move gryphon textures
-  MainMenuBarLeftEndCap:SetPoint("RIGHT", MainMenuBarArtFrame, "LEFT", 30, 0)
-  MainMenuBarRightEndCap:SetPoint("LEFT", MainMenuBarArtFrame, "RIGHT", -30, 0)
+  MainMenuBarLeftEndCap:SetPoint("BOTTOMRIGHT", MainMenuBar, "BOTTOMLEFT", 27, -2)
+  MainMenuBarRightEndCap:SetPoint("BOTTOMLEFT", MainMenuBar, "BOTTOMRIGHT", -27, -2)
 
   -- move MultiBarBottomRight ontop of MultiBarBottomLeft
   MultiBarBottomRight:ClearAllPoints()
