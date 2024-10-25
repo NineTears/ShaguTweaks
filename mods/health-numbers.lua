@@ -1,13 +1,14 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local Abbreviate = ShaguTweaks.Abbreviate
 local GetColorGradient = ShaguTweaks.GetColorGradient
 local vanilla = ShaguTweaks.GetExpansion() == "vanilla" or nil
 
 local module = ShaguTweaks:register({
-  title = "状态条数值",
-  description = "[health-numbers]\n估计实际生命值显示在玩家、宠物和目标的生命条，显示魔法值/能量值/怒气值。",
+  title = T["Real Health Numbers"],
+  description = T["Estimates health numbers, and shows numbers on player, pet and target unit frames."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "单位框架",
+  category = T["Unit Frames"],
   enabled = true,
 })
 

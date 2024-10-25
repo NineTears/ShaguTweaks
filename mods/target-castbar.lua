@@ -1,13 +1,14 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local GetExpansion = ShaguTweaks.GetExpansion
 local UnitCastingInfo = ShaguTweaks.UnitCastingInfo
 local UnitChannelInfo = ShaguTweaks.UnitChannelInfo
 
 local module = ShaguTweaks:register({
-  title = "目标施法条",
-  description = "[target-castbar]\n在目标单位框架上显示对方施法条。",
+  title = T["Enemy Castbars"],
+  description = T["Shows an enemy castbar on target unit frame."],
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "单位框架",
+  category = T["Unit Frames"],
   enabled = true,
 })
 
@@ -46,6 +47,7 @@ castbar.spark:SetHeight(20)
 castbar.spark:SetBlendMode("ADD")
 
 castbar.backdrop = CreateFrame("Frame", nil, castbar)
+castbar.backdrop:SetFrameStrata("BACKGROUND")
 castbar.backdrop:SetPoint("TOPLEFT", castbar, "TOPLEFT", -3, 3)
 castbar.backdrop:SetPoint("BOTTOMRIGHT", castbar, "BOTTOMRIGHT", 3, -3)
 castbar.backdrop:SetBackdrop({
@@ -64,10 +66,20 @@ module.enable = function(self)
   TargetFrame:SetScript("OnUpdate", function(arg)
     if oldUpdate then oldUpdate(arg) end
 
-    local cast, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitCastingInfo(this.unit)
+    local query = this.unit
+    local channel = false
+
+    -- try to read cast and guid from SuperWoW (except for self casts)
+    if ShaguTweaks.superwow_active and this.unit and not UnitIsUnit(this.unit, 'player') then
+      local _, guid = UnitExists(this.unit)
+      query = guid or query
+    end
+
+    local cast, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitCastingInfo(query)
     if not cast then
       -- scan for channel spells if no cast was found
-      cast, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitChannelInfo(this.unit)
+      channel, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitChannelInfo(query)
+      cast = channel
     end
 
     if cast then

@@ -1,10 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local UnitCastingInfo = ShaguTweaks.UnitCastingInfo
 local UnitChannelInfo = ShaguTweaks.UnitChannelInfo
 
 local module = ShaguTweaks:register({
-  title = "姓名版施法条",
-  description = "[nameplate-castbar]\n根据战斗日志估算，在姓名版添加施法条。",
+  title = T["Nameplate Castbar"],
+  description = T["Adds a castbar to the nameplate based on combat log estimations."],
   expansions = { ["vanilla"] = true, ["tbc"] = false },
   category = "单位框架",
   enabled = true,
@@ -55,6 +56,7 @@ module.enable = function(self)
 
     -- castbar border
     plate.castbar.backdrop = CreateFrame("Frame", nil, plate.castbar)
+    plate.castbar.backdrop:SetFrameLevel(plate.castbar:GetFrameLevel())
     plate.castbar.backdrop:SetPoint("TOPLEFT", plate.castbar, "TOPLEFT", -3, 3)
     plate.castbar.backdrop:SetPoint("BOTTOMRIGHT", plate.castbar, "BOTTOMRIGHT", 3, -3)
     plate.castbar.backdrop:SetBackdrop(backdrop)
@@ -77,6 +79,11 @@ module.enable = function(self)
 
     local name = this.name:GetText()
     local cast, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitCastingInfo(name)
+
+    -- read enemy casts from SuperWoW if enabled
+    if ShaguTweaks.superwow_active then
+      cast, nameSubtext, text, texture, startTime, endTime, isTradeSkill = UnitCastingInfo(this:GetName(1))
+    end
 
     if cast then
       local duration = endTime - startTime

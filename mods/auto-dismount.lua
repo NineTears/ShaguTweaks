@@ -1,14 +1,16 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 
 local module = ShaguTweaks:register({
-  title = "自动下马",
-  description = "[auto-dismount]\n提示“你正在骑乘状态”时，自动取消坐骑",
+  title = T["Auto Dismount"],
+  description = T["Automatically dismounts whenever a spell is casted."],
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   enabled = nil,
 })
 
 module.enable = function(self)
   local dismount = CreateFrame("Frame")
+  ShaguTweaks.dismount = dismount
 
   -- mount tooltip texts
   dismount.strings = {

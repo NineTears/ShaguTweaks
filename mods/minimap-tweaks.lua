@@ -1,10 +1,11 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 
 local module = ShaguTweaks:register({
-  title = "小地图精简",
-  description = "[minimap-tweaks]\n隐藏不必要的迷你地图按钮，并允许使用鼠标滚轮进行缩放。",
+  title = T["MiniMap Tweaks"],
+  description = T["Hides unnecessary mini map buttons and allows to zoom using the mouse wheel."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "世界地图&小地图",
+  category = T["World & MiniMap"],
   enabled = nil,
 })
 

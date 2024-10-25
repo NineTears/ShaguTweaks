@@ -1,10 +1,25 @@
+local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
+
 local module = ShaguTweaks:register({
-  title = "精简暴雪动作条",
-  description = "[reduced-actionbar]\n精简暴雪风格动作条，移除底部默认工具栏（如包裹栏和系统栏）和重排居中堆叠系统动作条、经验条和声望条。",
+  title = T["Reduced Actionbar Size"],
+  description = T["Reduces the actionbar size by removing several items such as the bag panel and microbar"],
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   category = "界面UI",
   enabled = true,
 })
+
+local function ReplaceBag()
+  local id = this:GetID()
+  if id ~= 0 then
+    id = ContainerIDToInventoryID(id)
+    if CursorHasItem() then
+      PutItemInBag(id)
+    else
+      PickupBagFromSlot(id)
+    end
+  end
+end
 
 module.enable = function(self)
   -- general function to hide textures and frames
@@ -134,7 +149,7 @@ module.enable = function(self)
     anchor = MultiBarBottomRight:IsVisible() and MultiBarBottomRight or anchor
     local pet_offset = PetActionBarFrame:IsVisible() and 40 or 0
     CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 10 + pet_offset)
-
+	--修复背景层级问题
     PetActionBarFrame:SetFrameStrata("LOW")
     ShapeshiftBarFrame:SetFrameStrata("LOW")
     MainMenuBarArtFrame:SetFrameStrata("LOW")

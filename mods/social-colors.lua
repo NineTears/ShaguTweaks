@@ -1,4 +1,5 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local L = ShaguTweaks.L
 local gfind = string.gmatch or string.gfind
 local GetUnitData = ShaguTweaks.GetUnitData
@@ -10,10 +11,10 @@ local strsplit = ShaguTweaks.strsplit
 local friendinfo = gsub(gsub(FRIENDS_LEVEL_TEMPLATE,"%%s","%%s %%s"),"%%d","%%s")
 
 local module = ShaguTweaks:register({
-  title = "姓名职业着色",
-  description = "[social-colors]\n在查找列表、公会列表、好友列表和聊天框中显示职业颜色",
+  title = T["Social Colors"],
+  description = T["Show class colors in Who, Guild, Friends and Chat."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "社交&聊天",
+  category = T["Social & Chat"],
   enabled = true,
 })
 

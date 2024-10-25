@@ -1,12 +1,13 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local hooksecurefunc = hooksecurefunc or ShaguTweaks.hooksecurefunc
 local GetExpansion = ShaguTweaks.GetExpansion
 local AddBorder = ShaguTweaks.AddBorder
 local TimeConvert = ShaguTweaks.TimeConvert
 
 local module = ShaguTweaks:register({
-  title = "技能冷却",
-  description = "[cooldown-numbers]\n在技能冷却时以文本形式显示剩余持续时间。",
+  title = T["Cooldown Numbers"],
+  description = T["Display  the remaining duration as text on every cooldown."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
   enabled = nil,
   color = { r = .3, g = .3, b = .3, a = .9}

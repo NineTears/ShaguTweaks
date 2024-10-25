@@ -1,13 +1,14 @@
 local _G = ShaguTweaks.GetGlobalEnv()
+local T = ShaguTweaks.T
 local Abbreviate = ShaguTweaks.Abbreviate
 local GetColorGradient = ShaguTweaks.GetColorGradient
 local vanilla = ShaguTweaks.GetExpansion() == "vanilla" or nil
 
 local module = ShaguTweaks:register({
-  title = "低血量血条变色",
-  description = "[health-color]\n当生命值低于20%改变姓名版的颜色。",
+  title = T["Unit Frame Health Colors"],
+  description = T["Change health text color based on its value."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "单位框架",
+  category = T["Unit Frames"],
   enabled = true,
 })
 

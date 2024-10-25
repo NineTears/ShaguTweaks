@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.65]|R
-## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.65]|R
+## Title: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.7]|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星3.7]|R
 ## Notes: |cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks-|R |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Author: Shagu, NineTears(Wind), 叶叶菜
@@ -11,6 +11,16 @@
 # locales
 locales\locales_enUS.lua
 locales\locales_zhCN.lua
+
+# translations
+locales\translations_deDE.lua
+locales\translations_enUS.lua
+locales\translations_esES.lua
+locales\translations_frFR.lua
+locales\translations_koKR.lua
+locales\translations_ruRU.lua
+locales\translations_zhCN.lua
+locales\translations_zhTW.lua
 
 # basic
 main.lua
@@ -40,27 +50,17 @@ mods\actionbar-quick-actions.lua
 mods\actionbar-range-color.lua
 mods\actionbar-reagent-count.lua
 mods\auction-search-timer.lua
-mods\auto-dismount.lua
-mods\auto-stance.lua
 mods\bag-search.lua
-mods\blue-shaman.lua
 mods\camera.lua
 mods\chat-levels.lua
-mods\chat-links.lua
 mods\chat-npcspam.lua
 mods\chat-timestamps.lua
 mods\chat-tweaks-extended.lua
-mods\chat-tweaks.lua
-mods\cooldown-numbers.lua
 mods\cursor-tooltip.lua
 mods\custom.lua
 mods\dark-ui-elements.lua
 mods\equip-compare.lua
-mods\health-color.lua
-mods\health-numbers.lua
 mods\hide-combat-tooltip.lua
-mods\hide-errors.lua
-mods\hide-gryphons.lua
 mods\hide-unit-frames.lua
 mods\improved-advanced-options.lua
 mods\improved-castbar.lua
@@ -75,21 +75,32 @@ mods\minimap-framerate-latency.lua
 mods\minimap-square.lua
 mods\minimap-timer.lua
 mods\minimap-tweaks.lua
-mods\nameplate-castbar.lua
-mods\reduced-actionbar.lua
 mods\sell-junk.lua
+mods\unitframes-classcolor.lua
+mods\vendor-values.lua
+mods\worldmap-coordinates.lua
+mods\blue-shaman.lua
+mods\nameplate-castbar.lua
 mods\skip-gossip.lua
-mods\social-colors.lua
 mods\target-castbar.lua
 mods\target-debufftimer.lua
+mods\social-colors.lua
+mods\chat-links.lua
+mods\health-numbers.lua
+mods\health-color.lua
+mods\auto-dismount.lua
+mods\auto-stance.lua
 mods\tooltip-details.lua
-mods\turtle-wow.lua
+mods\hide-errors.lua
+mods\chat-tweaks.lua
+mods\hide-gryphons.lua
 mods\unitframes-bighealth.lua
-mods\unitframes-classcolor.lua
 mods\unitframes-classportrait.lua
+mods\cooldown-numbers.lua
+mods\turtle-wow.lua
+mods\superwow.lua
+mods\reduced-actionbar.lua
 mods\unitframes-combat-indicator.lua
 mods\unitframes-energy-tick.lua
 mods\unitframes-target-buffs.lua
-mods\vendor-values.lua
-mods\worldmap-coordinates.lua
 mods\worldmap-reveal.lua
