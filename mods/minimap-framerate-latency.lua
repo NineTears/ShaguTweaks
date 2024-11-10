@@ -4,7 +4,7 @@ local module = ShaguTweaks:register({
   title = "小地图帧数和延迟",
   description = "[minimap-framerate-latency]\n在小地图添加帧数和延迟显示。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "世界地图&小地图",
+  category = T["World & MiniMap"],
   enabled = nil,
 })
 

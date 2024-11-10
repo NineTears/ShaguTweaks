@@ -4,7 +4,7 @@ local module = ShaguTweaks:register({
   title = "提示框跟随",
   description = "[cursor-tooltip]\n让鼠标提示框跟随光标",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "提示&物品",
+  category = T["Tooltip & Items"],
   enabled = true,
 })
 

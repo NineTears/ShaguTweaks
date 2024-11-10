@@ -5,7 +5,7 @@ local module = ShaguTweaks:register({
   title = "世界地图迷雾显示",
   description = "[worldmap-reveal]\n显示世界地图上未探索的区域。",
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  category = "世界地图&小地图",
+  category = T["World & MiniMap"],
   enabled = nil,
 })
 

@@ -6,7 +6,7 @@ local module = ShaguTweaks:register({
   title = "物品稀有度着色",
   description = "[item-colors-glow]\n在背包、银行、角色、查看、商人、工艺、贸易、邮件、贸易和战利品框架上以边框颜色显示物品稀有性。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "提示&物品",
+  category = T["Tooltip & Items"],
   enabled = true,
 })
 

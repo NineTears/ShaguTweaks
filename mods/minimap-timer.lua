@@ -2,7 +2,7 @@ local module = ShaguTweaks:register({
   title = "小地图计时器",
   description = "[minimap-timer]\n在小地图时钟中添加一个可切换计时器。左键单击时钟图标打开计时器。左键单击计时器以启动/暂停，或右键单击重置。按住Ctrl和Shift，然后拖动以移动，按住Ctrl和Shift，然后右键单击以重置位置。需开启小地图时钟",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "世界地图&小地图",
+  category = T["World & MiniMap"],
   enabled = nil,
 })
 

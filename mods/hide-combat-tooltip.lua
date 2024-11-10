@@ -2,7 +2,7 @@ local module = ShaguTweaks:register({
   title = "战斗中隐藏提示",
   description = "[hide-combat-tooltip]\n在战斗中隐藏工具提示。在战斗中，按住shift键将显示工具提示。",
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
-  category = "提示&物品",
+  category = T["Tooltip & Items"],
   enabled = nil,
 })
 

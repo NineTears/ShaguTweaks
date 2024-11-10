@@ -4,7 +4,7 @@ local module = ShaguTweaks:register({
     title = "背包搜索框",
     description = "[bag-search]\n为背包添加一个搜索框，用于搜索你的背包、钥匙链和银行。按Esc或Tab键完成搜索。",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
-    category = "提示&物品",
+    category = T["Tooltip & Items"],
     enabled = nil,
 })
   

@@ -2,7 +2,7 @@ local module = ShaguTweaks:register({
     title = "拾取框跟随",
     description = "[loot-cursor]\n使拾取框在光标位置出现。",
     expansions = { ["vanilla"] = true, ["tbc"] = nil },
-    category = "提示&物品",
+    category = T["Tooltip & Items"],
     enabled = true,
 })
 

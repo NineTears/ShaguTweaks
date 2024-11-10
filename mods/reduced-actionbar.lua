@@ -103,8 +103,8 @@ module.enable = function(self)
   MainMenuBarTexture1:SetPoint("RIGHT", MainMenuBarArtFrame, "RIGHT")
 
   -- move gryphon textures
-  MainMenuBarLeftEndCap:SetPoint("BOTTOMRIGHT", MainMenuBar, "BOTTOMLEFT", 27, -2)
-  MainMenuBarRightEndCap:SetPoint("BOTTOMLEFT", MainMenuBar, "BOTTOMRIGHT", -27, -2)
+  MainMenuBarLeftEndCap:SetPoint("RIGHT", MainMenuBarArtFrame, "LEFT", 30, 0)
+  MainMenuBarRightEndCap:SetPoint("LEFT", MainMenuBarArtFrame, "RIGHT", -30, 0)
 
   -- move MultiBarBottomRight ontop of MultiBarBottomLeft
   MultiBarBottomRight:ClearAllPoints()
@@ -149,26 +149,7 @@ module.enable = function(self)
     anchor = MultiBarBottomRight:IsVisible() and MultiBarBottomRight or anchor
     local pet_offset = PetActionBarFrame:IsVisible() and 40 or 0
     CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 10 + pet_offset)
-	--修复背景层级问题
-    PetActionBarFrame:SetFrameStrata("LOW")
-    ShapeshiftBarFrame:SetFrameStrata("LOW")
-    MainMenuBarArtFrame:SetFrameStrata("LOW")
-    CastingBarFrame:SetFrameStrata("LOW") 
-    MainMenuExpBar:SetFrameStrata("LOW") 
-    MainMenuBar:SetFrameStrata("LOW") 
-
-    for i = 1, NUM_ACTIONBAR_BUTTONS do
-      local button = getglobal("ActionButton" .. i)
-        button:SetFrameStrata("LOW")
-        button = getglobal("MultiBarBottomRightButton" .. i)
-        button:SetFrameStrata("LOW")
-        button = getglobal("MultiBarBottomLeftButton" .. i)
-        button:SetFrameStrata("LOW")
-        button = getglobal("MultiBarLeftButton" .. i)
-        button:SetFrameStrata("LOW")
-        button = getglobal("MultiBarRightButton" .. i)
-        button:SetFrameStrata("LOW")
-    end
+  end
 
   -- restore frame positions when UIParent becomes visible
   local restore = CreateFrame("Frame", nil, UIParent)
