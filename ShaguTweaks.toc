@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffffcc00Shagu|cffffffffTweaks|R |cffff1450[3.72]|R
-## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks|R |cffff1450[3.72]|R
+## Title: |cffffcc00Shagu|cffffffffTweaks|R |cffff1450[3.73]|R
+## Title-zhCN:|cffffcc00Shagu|cffffffffTweaks|R |cffff1450[3.73]|R
 ## Notes: |cffffcc00Shagu|cffffffffTweaks|R 由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffffcc00Shagu|cffffffffTweaks|R 由|cff33ffccNineTears(Wind)|R&|cff33ffcc叶叶菜|R修改汉化。|N本插件完全免费，请勿在第三方购买！
 ## Author: Shagu, NineTears(Wind), 叶叶菜
@@ -70,7 +70,7 @@ mods\improved-advanced-options.lua
 mods\improved-castbar.lua
 mods\improved-interface-options.lua
 mods\improved-roll-frames.lua
-mods\item-colors-glow.lua
+mods\item-colors.lua
 mods\loot-cursor.lua
 mods\max-smoothness.lua
 mods\microbuttons-reduced-actionbar.lua
