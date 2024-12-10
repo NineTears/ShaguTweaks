@@ -6,7 +6,7 @@ local module = ShaguTweaks:register({
   description = T["Show debuff durations on the target unit frame."],
   expansions = { ["vanilla"] = true, ["tbc"] = nil },
   category = T["Unit Frames"],
-  enabled = nil,
+  enabled = true,
 })
 
 local libdebuff = ShaguTweaks.libdebuff
@@ -21,7 +21,7 @@ local function CreateTextCooldown(cooldown)
   cooldown.readable:SetFrameLevel(cooldown:GetParent():GetFrameLevel() + 1)
   cooldown.readable.text = cooldown.readable:CreateFontString("pfCooldownFrameText", "OVERLAY")
 
-  cooldown.readable.text:SetFont(STANDARD_TEXT_FONT, 10, "OUTLINE")
+  cooldown.readable.text:SetFont(STANDARD_TEXT_FONT, 16, "OUTLINE")
   cooldown.readable.text:SetPoint("CENTER", cooldown.readable, "CENTER", 0, 0)
   cooldown.readable:SetScript("OnUpdate", function()
     parent = this:GetParent()

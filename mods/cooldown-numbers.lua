@@ -9,7 +9,8 @@ local module = ShaguTweaks:register({
   title = T["Cooldown Numbers"],
   description = T["Display  the remaining duration as text on every cooldown."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  enabled = nil,
+  category = T["Unit Frames"],
+  enabled = true,
   color = { r = .3, g = .3, b = .3, a = .9}
 })
 
@@ -50,8 +51,8 @@ local function CreateCoolDown(cooldown, start, duration)
 
   -- detect dynamic font size
   local size = parent:GetHeight() or 0
-  size = size > 0 and size * .64 or 12
-  size = size > 14 and 14 or size
+  size = size > 0 and size * .80 or 24
+  size = size > 26 and 26 or size
 
   -- set fonts
   cooldown.cooldowntext.text:SetFont(STANDARD_TEXT_FONT, size, "OUTLINE")

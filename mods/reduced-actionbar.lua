@@ -149,6 +149,26 @@ module.enable = function(self)
     anchor = MultiBarBottomRight:IsVisible() and MultiBarBottomRight or anchor
     local pet_offset = PetActionBarFrame:IsVisible() and 40 or 0
     CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 10 + pet_offset)
+
+    PetActionBarFrame:SetFrameStrata("LOW")
+    ShapeshiftBarFrame:SetFrameStrata("LOW")
+    MainMenuBarArtFrame:SetFrameStrata("LOW")
+    CastingBarFrame:SetFrameStrata("LOW")
+    MainMenuExpBar:SetFrameStrata("LOW")
+    MainMenuBar:SetFrameStrata("LOW")
+
+    for i = 1, NUM_ACTIONBAR_BUTTONS do
+      local button = getglobal("ActionButton" .. i)
+      button:SetFrameStrata("LOW")
+      button = getglobal("MultiBarBottomRightButton" .. i)
+      button:SetFrameStrata("LOW")
+      button = getglobal("MultiBarBottomLeftButton" .. i)
+      button:SetFrameStrata("LOW")
+      button = getglobal("MultiBarLeftButton" .. i)
+      button:SetFrameStrata("LOW")
+      button = getglobal("MultiBarRightButton" .. i)
+      button:SetFrameStrata("LOW")
+    end
   end
 
   -- restore frame positions when UIParent becomes visible

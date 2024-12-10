@@ -104,7 +104,7 @@ module.enable = function(self)
 
   local function ShowCompare(tooltip)
     -- abort if shift is not pressed
-    --if not IsShiftKeyDown() then  默认不显示对比窗口
+    --if not IsShiftKeyDown() then  默认显示对比窗口
       --ShoppingTooltip1:hide()
       --ShoppingTooltip2:hide()
       --return

@@ -8,7 +8,7 @@ local module = ShaguTweaks:register({
 
 module.enable = function(self)    
     local exp = CreateFrame("Frame", "exp", UIParent)
-    exp:SetFrameStrata("MEDIUM")
+    exp:SetFrameStrata("HIGH")
     local font, size, outline = "Fonts\\frizqt__.TTF", 12, "OUTLINE"
     exp.expstring = exp:CreateFontString(nil, "OVERLAY", "GameFontWhite")
     exp.expstring:SetFont(font, size, outline)
@@ -95,9 +95,6 @@ module.enable = function(self)
         isMousing = true
         updateExp(isMousing)
         exp.expstring:Show()
-        for _, element in pairs(expArt) do
-            element:SetAlpha(0.25)
-        end
     end
     
     local function expHide()
@@ -106,9 +103,6 @@ module.enable = function(self)
             exp.expstring:Hide()
         else
             updateExp(isMousing)
-        end
-        for _, element in pairs(expArt) do
-            element:SetAlpha(1)
         end
     end
     
@@ -125,17 +119,11 @@ module.enable = function(self)
         isMousing = true
         updateRep()
         exp.repstring:Show()
-        for _, element in pairs(expArt) do
-            element:SetAlpha(0.25)
-        end
     end
     
     local function repHide()
         isMousing = nil
         exp.repstring:Hide()
-        for _, element in pairs(expArt) do
-            element:SetAlpha(1)
-        end
     end
     
     local function mouseoverRep()
